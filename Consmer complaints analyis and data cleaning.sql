@@ -66,7 +66,6 @@ SELECT
 FROM 
   Consumer_complaints.consumercomplaints;
   
-  
 #9. Adding id column as primary genrated from the company column
 ALTER TABLE Consumer_complaints.consumercomplaints
 ADD COLUMN id INT NOT NULL AUTO_INCREMENT PRIMARY KEY;
