@@ -59,4 +59,28 @@ ADD COLUMN date_difference INT;
 UPDATE Consumer_complaints.consumercomplaints 
 SET date_difference = ABS(datediff(Date_Sent_to_Company_new, Date_Received_new));
 
+#8.sql statement that auto creates id column based on different names(in text) from product_name column
+SELECT 
+ Product_Name,
+  row_number() over (partition by Product_Name order by Product_Name) as id
+FROM 
+  Consumer_complaints.consumercomplaints;
+  
+  
+#9. Adding id column as primary genrated from the company column
+ALTER TABLE Consumer_complaints.consumercomplaints
+ADD COLUMN id INT NOT NULL AUTO_INCREMENT PRIMARY KEY;
+
+ALTER TABLE Consumer_complaints.consumercomplaints
+ADD UNIQUE INDEX company_unique_idx (Company);
+
+UPDATE my_table t1
+SET id = (
+    SELECT MIN(id)
+    FROM my_table t2
+    WHERE t1.Company = t2.Company
+);
+
+
+
 
