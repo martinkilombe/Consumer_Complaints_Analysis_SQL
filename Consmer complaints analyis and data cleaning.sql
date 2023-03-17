@@ -30,6 +30,10 @@ ALTER TABLE consumer_complaints.consumercomplaints
 DROP COLUMN Consumer_Complaint_Narrative,
 DROP COLUMN Company_Public_Response;
 
+#e)Splitting the Issue into seperate sections using the comma bits
+#-First create columns to handle the data
+
+
 
 #Basic Analytics
 #1. Find out complaints were received and sent on the same day
