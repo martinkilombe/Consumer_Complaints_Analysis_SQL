@@ -22,6 +22,10 @@ DROP COLUMN Date_Received,
 DROP COLUMN Date_Sent_to_Company,
 DROP COLUMN response_time_days;
 
+#c)Dropping the column with Consumer_consent_provided since it contains "N/A" values
+ALTER TABLE consumer_complaints.consumercomplaints
+DROP COLUMN consumer_Consent_Provided;
+
 
 #Basic Analytics
 #1. Find out complaints were received and sent on the same day
