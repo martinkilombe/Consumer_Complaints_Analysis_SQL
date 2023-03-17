@@ -25,6 +25,10 @@ DROP COLUMN response_time_days;
 #c)Dropping the column with Consumer_consent_provided since it contains "N/A" values
 ALTER TABLE consumer_complaints.consumercomplaints
 DROP COLUMN consumer_Consent_Provided;
+#d)Dropping two more columns since they contain an empty rows in all the entries
+ALTER TABLE consumer_complaints.consumercomplaints
+DROP COLUMN Consumer_Complaint_Narrative,
+DROP COLUMN Company_Public_Response;
 
 
 #Basic Analytics
