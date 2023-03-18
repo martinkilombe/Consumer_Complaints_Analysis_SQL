@@ -12,7 +12,7 @@ SET Date_Received_new = STR_TO_DATE(Date_Received, '%d/%m/%Y');
 #b) Alter tables and add Date_Sent_to_Company_new column replacing the Date_Sent_to_Company
 ALTER TABLE Consumer_complaints.consumercomplaints
 ADD COLUMN Date_Sent_to_Company_new DATE;
-##update column created(Date_Sent_to_Company_new) with new dates
+##update column created(Date_Sent_to_Company_new) with new dates.
 UPDATE Consumer_complaints.consumercomplaints
 SET Date_Sent_to_Company_new = STR_TO_DATE(Date_Sent_to_Company, '%d/%m/%Y');
 
