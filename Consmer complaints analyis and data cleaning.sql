@@ -35,7 +35,11 @@ UPDATE consumer_complaints.consumercomplaints
 SET Tags = 'Information Unavailable'
 WHERE Tags ='';
 
-#f)Fill the sub_product column with Null since the Sub-Product is NOT AVAILABLE
+#f)Filling the empty sub_issue rows with NULLS since they are not available
+UPDATE consumer_complaints.consumercomplaints
+SET Sub_Issue = NULL
+WHERE Sub_Issue = '';
+#g)Fill the sub_product column with Null since the Sub-Product is NOT AVAILABLE
 UPDATE consumer_complaints.consumercomplaints
 SET Sub_Product = NULL
 WHERE Sub_Product = '';
