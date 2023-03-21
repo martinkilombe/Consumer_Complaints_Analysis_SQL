@@ -30,12 +30,16 @@ ALTER TABLE consumer_complaints.consumercomplaints
 DROP COLUMN Consumer_Complaint_Narrative,
 DROP COLUMN Company_Public_Response;
 
-#Filling the empty rows in the Tags column with "Unavailable" to indicate that no information is available
+#e)Filling the empty rows in the Tags column with "Unavailable" to indicate that no information is available
 UPDATE consumer_complaints.consumercomplaints
 SET Tags = 'Information Unavailable'
 WHERE Tags ='';
 
-#e)Splitting the Issue into seperate sections using the comma bits
+#f)Fill the sub_product column with Null since the Sub-Product is NOT AVAILABLE
+UPDATE consumer_complaints.consumercomplaints
+SET Sub_Product = NULL
+WHERE Sub_Product = '';
+
 #-First create columns to handle the data
 #Basic Analytics
 #1. Find out complaints were received and sent on the same day
