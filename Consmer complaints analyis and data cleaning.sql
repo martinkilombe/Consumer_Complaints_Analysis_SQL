@@ -70,7 +70,7 @@ ORDER BY State_Name;
 SELECT * FROM Consumer_complaints.consumercomplaints 
 WHERE Product_Name LIKE "%Credit%";
 
-#6. Extract all rows with the word "Late" in the Issue field
+#6. Extract all rows with the word "Late" in the Issue field.
 SELECT * FROM Consumer_complaints.consumercomplaints 
 WHERE Issue LIKE "%Late%";
 
