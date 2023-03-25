@@ -16,7 +16,7 @@ ADD COLUMN Date_Sent_to_Company_new DATE;
 UPDATE Consumer_complaints.consumercomplaints
 SET Date_Sent_to_Company_new = STR_TO_DATE(Date_Sent_to_Company, '%d/%m/%Y');
 
-#Dropping the old columns
+#Dropping the old columns.
 ALTER TABLE Consumer_complaints.consumercomplaints
 DROP COLUMN Date_Received,
 DROP COLUMN Date_Sent_to_Company,
