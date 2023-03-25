@@ -44,8 +44,7 @@ UPDATE consumer_complaints.consumercomplaints
 SET Sub_Product = NULL
 WHERE Sub_Product = '';
 
-
-#Basic Analytics
+#Basic Analytics on the Cleaned Tables
 #1. Find out complaints were received and sent on the same day
 SELECT Date_Received_new , Date_Sent_to_Company_new, Issue ,
 	CASE WHEN Date_Received_new = Date_Sent_to_Company_new 
