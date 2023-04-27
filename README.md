@@ -20,12 +20,12 @@ Here's a brief overview of the project goals
   3. Filling the empty rows in the Tags column with "Unavailable" to indicate that no information is available.
   4. Filling the empty sub_issue,sub_product rows with NULLS since they are not available.
 
-  - Basic Analysis
+ - Basic Analysis
   1. Find out complaints were received and sent on the same day.
   2. Extract the complaints received in the state of New York & Califronia.
   3. Extract all rows with the word "Credit" in the product field & Extract all rows with the word "Late" in the Issue field.
   
-  -Advanced exploration and altering of table
+  - Advanced exploration and altering of table
   1. Creating a new column that calculates the difference between the dates.
   2. sql statement that auto creates id column based on different names(in text) from product_name column
   3. Adding id column as primary genrated from the company column
